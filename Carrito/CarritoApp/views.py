@@ -32,3 +32,6 @@ def limpiar_carrito(request):
     carrito = Carrito(request)
     carrito.limpiar()
     return redirect("Tienda")
+
+def pago(request):
+    return render(request, "pago.html")

@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from CarritoApp.views import tienda, agregar_producto, eliminar_producto, restar_producto, limpiar_carrito
+from CarritoApp.views import tienda, agregar_producto, eliminar_producto, restar_producto, limpiar_carrito, pago
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +24,5 @@ urlpatterns = [
     path('eliminar/<int:producto_id>/', eliminar_producto, name="Del"),
     path('restar/<int:producto_id>/', restar_producto, name="Sub"),
     path('limpiar/', limpiar_carrito, name="CLS"),
+    path('pago/', pago, name="pago"),
 ]
